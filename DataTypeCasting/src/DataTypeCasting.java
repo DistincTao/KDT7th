@@ -38,6 +38,29 @@ public class DataTypeCasting {
 		
 		short sMax = 32767;
 		System.out.println((short)(sMax + 1)); // 담을 수 있는 최대의 수보다 하나 큰 수를 기입하면 최소소를 반환
+		
+		// 명시적 형변환
+		double pi = 3.141592;
+		float fpi = (float) pi;
+		System.out.println("fpi : " + fpi);
+		
+		int i3 = 32767;
+		short s = (short)i3;
+		System.out.println("s : " + s);
+		
+		long l = -2147483648;
+		int i4 = (int)l;
+		System.out.println("i4 : " + i4);
+		
+		int i5 = 32768;
+		short s2 = (short)i5;
+		System.out.println("s2 : " + s2);
+		
+		//
+		char c = 'a';
+		System.out.println(c);
+		System.out.println((int)c);
+		System.out.println((char)98);
 	}
 
 }
