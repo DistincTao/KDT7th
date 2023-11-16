@@ -1,5 +1,7 @@
 package score;
 
+//import java.io.File;
+
 public class Student {
 	
 	public static final int MAX_SCORE = 100;
@@ -20,6 +22,9 @@ public class Student {
 	private double avg;
 	private char grade;
 	
+	public Student () {
+		
+	}
 	
 	public Student(String studNum, String studName, String kor, String eng, String math) {
 		this.studNum = studNum;
@@ -27,9 +32,7 @@ public class Student {
 		this.kor = Integer.parseInt(kor);
 		this.eng = Integer.parseInt(eng);
 		this.math = Integer.parseInt(math);
-		this.tot = Integer.parseInt(kor) + Integer.parseInt(eng) + Integer.parseInt(math);
-		this.avg = this.tot / 3;
-		this.grade = setGrade(this.avg);
+		setScores();
 	}
 	
 	public Student(Student s) {
@@ -43,7 +46,9 @@ public class Student {
 		this.grade = s.grade;
 	}
 
-	public char setGrade(double avg) {
+	public char setScores() {
+		this.tot = this.kor + this.eng + this.math;
+		this.avg = this.tot / 3;
 		int avgGrade = (int)(avg / 10);
 		switch (avgGrade) {
 			case 10 :
@@ -103,33 +108,40 @@ public class Student {
 	}
 
 	public void setStudName(String studName) {
-		this.studName = studName;
+			this.studName = studName;
 	}
 
+//	public void setStudName(String studName, File certificates, boolean isApproved) {
+//		if (isApproved) {
+//			this.studName = studName;
+//		}
+//	}
+
 	public void setKor(int kor) {
-		this.kor = kor;
-		this.tot = this.kor + this.eng + this.math;
-		this.avg = this.tot / 3;
-		this.avg = setGrade(this.avg);
+		if (kor >= MIN_SCORE && kor <= MAX_SCORE ) {
+			this.kor = kor;
+			setScores();
+		}
+
 	}
 
 	public void setEng(int eng) {
-		this.eng = eng;
-		this.tot = this.kor + this.eng + this.math;
-		this.avg = this.tot / 3;
-		this.avg = setGrade(this.avg);
+		if (eng >= MIN_SCORE && eng <= MAX_SCORE ) {
+			this.eng = eng;
+		}
+		setScores();
 	}
 
 	public void setMath(int math) {
-		this.math = math;
-		this.tot = this.kor + this.eng + this.math;
-		this.avg = this.tot / 3;
-		this.avg = setGrade(this.avg);
+		if (math >= MIN_SCORE && math <= MAX_SCORE ) {
+			this.math = math;
+		}
+		setScores();
 	}
 
 	@Override
 	public String toString() {
-		return "Student [studNum=" + studNum + ", studName=" + studName + ", kor=" + kor + ", eng=" + eng + ", math="
-				+ math + ", tot=" + tot + ", avg=" + avg + ", grade=" + grade + "]";
+		return "Student [학번=" + studNum + ", 이름=" + studName + ", 국어=" + kor + ", 영어=" + eng + ", 수학="
+				+ math + ", 총점=" + tot + ", 평균=" + avg + ", 학점=" + grade + "]";
 	}
 }

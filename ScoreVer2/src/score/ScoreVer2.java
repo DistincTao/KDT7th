@@ -53,6 +53,7 @@ public class ScoreVer2 {
 		System.out.println("---------------------------------------------------------------------------------");
 		System.out.println("1. 학생 정보 등록");
 		System.out.println("---------------------------------------------------------------------------------");
+		
 		System.out.println("학번 등록 >>");
 		String studNum = sc.nextLine();
 		
@@ -76,9 +77,9 @@ public class ScoreVer2 {
 			System.out.println("영어 점수 등록 >>");
 			eng = sc.nextLine();
 		} else if (Integer.parseInt(eng) < Student.MIN_SCORE || Integer.parseInt(eng) > Student.MAX_SCORE) {
-		System.out.println("점수를 다시 입력해 주세요.");
-		System.out.println("영어 점수 다시 등록");
-		eng = sc.nextLine();
+			System.out.println("점수를 다시 입력해 주세요.");
+			System.out.println("영어 점수 다시 등록");
+			eng = sc.nextLine();
 		}
 		
 		System.out.println("수학 점수 등록 >>");
@@ -90,7 +91,7 @@ public class ScoreVer2 {
 			System.out.println("점수를 다시 입력해 주세요.");
 			System.out.println("수학 점수 다시 등록 >>");
 			math = sc.nextLine();
-		}
+		} 
 		
 		Student newStudent = new Student(studNum, studName, kor, eng, math);
 		System.out.println(newStudent.toString());
