@@ -21,7 +21,6 @@ public class Dealer {
 //				newPlayer[i] = pickedCard;
 				players[i] = pickedCard;
 			}
-
 		}
 		return players;
 	}
@@ -29,9 +28,7 @@ public class Dealer {
 	public static void playerCard(Card[] players) {
 		for (int i = 0; i < players.length; i++) {
 			System.out.println("player" + (i + 1) + "의 카드: " + players[i].getShape() + ", " + players[i].getNum());			
-
 		}
-		
 	}
 
 	

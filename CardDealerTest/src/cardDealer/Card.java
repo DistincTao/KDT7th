@@ -24,15 +24,14 @@ public class Card {
 					cards[card_cnt] = newCards;
 					card_cnt++;
 				}
-		}
-			return cards;
+			}
+		return cards;
 	}
 
 	public static void cardOutput(Card[] newCards) {
 		for (int i = 0; i < 52 ; i++) {
 			System.out.println("카드 순서 " + (i + 1) + "번째 : " + newCards[i].getShape() + ", " + newCards[i].getNum());			
 		}
-		
 	}
 
 	public String getShape() {
