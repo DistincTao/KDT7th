@@ -42,8 +42,8 @@ public class Cat extends Pet{
 		return "야옹야옹야옹";
 	}
 	
-	public String doWag() {
-		return "꼬리를 흔듭니다.";
+	public String doLand() {
+		return "몸을 비틀어 착지합니다.";
 	}
 }
 

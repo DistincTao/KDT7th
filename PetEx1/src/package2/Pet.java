@@ -52,4 +52,8 @@ public abstract class Pet {
 	
 	public abstract String doCry();
 	
+	public String doEat() {
+		return "먹이를 먹습니다.";
+	}
+	
 }
