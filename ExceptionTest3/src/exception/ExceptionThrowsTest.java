@@ -41,13 +41,11 @@ public class ExceptionThrowsTest  {
 			e.printStackTrace();
 			System.out.println("정수로 바꿀 수 없는 문자열입니다!!");
 		}
-		
 	}
 
 	private static int getPositiveNumber() throws InputMismatchException {
 		Scanner sc = new Scanner (System.in);
 		int tmp = sc.nextInt();
-		
 		return tmp;
 	}
 }

@@ -26,7 +26,6 @@ public class MethodCreationEx1 {
 				}
 			}
 		}
-		
 	}
 	
 	static int sumArr(int[] arr) {
@@ -41,7 +40,6 @@ public class MethodCreationEx1 {
 		// 크기가 6인 int 배열을 임의의 수로 생성
 		int[] arr = {10, 4, 6, 7, 2, 1};
 
-		
 		// 메소드1 : 배열을 출력하는 메소드를 static으로 만들고, 호출
 		// 메소드2 : 위의 배열을 오름 차순 정렬하는 메소드를 만들고, 정렬된 배열을 출력
 		// 메소드3 : 배열의 총 합을 구하는 메소드를 만들고, 총합을 출력
@@ -51,17 +49,6 @@ public class MethodCreationEx1 {
 		
 		int resultSum = sumArr(arr);
 		System.out.println("배열의 총합은 : " + resultSum);
-		
-
-		
-	
-		
-		
-		
-		
-		
-		
-
 
 	}
 

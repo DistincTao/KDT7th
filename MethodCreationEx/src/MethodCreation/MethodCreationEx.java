@@ -22,7 +22,6 @@ public class MethodCreationEx {
 		return n + m;
 	}
 	
-	
 	public void outputNTimes(String str, int n) {
 		for (int i = 0; i < n; i++) {
 			System.out.println(str);
@@ -34,7 +33,6 @@ public class MethodCreationEx {
 			System.out.println(ft);
 		}
 	}
-	
 	
 	public static void main(String[] args) {
 		// 
@@ -53,7 +51,6 @@ public class MethodCreationEx {
 		System.out.println(mce.add(3, 5f));
 //		System.out.println(mce.add(3, 5)); //  오류가 나지는 않지만 추천 하지 않음 
 		//The static method add(int, int) from the type MethodCreationEx should be accessed in a static way
-		
 		
 		// 이름이 outputNTimes이고, 매개변수를 String 타입 변수 하나와 int 타입 하나를 받아서
 		// 그 문자열을 화면에 n번 반복해서 출력하는 메소도 (인스턴스 메소드)를 만들고, 호출 하세요.
@@ -79,7 +76,6 @@ class MyMath2 {
 	}
 	
 	double devide (double a, double b) {
-		
 		return a / b;
 	}
 }
