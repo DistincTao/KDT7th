@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/StaticVsInstanceEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/StaticVsInstance"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/SingleTonPattern"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ShapeEx2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ShapeEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ScoreVer3"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ScoreVer2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ScoreVer1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ReferenceParamEx"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/PrinterEx"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/PrimitiveParamEx"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/PolyMorphism_Casting"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/PolyMorphism_Binding"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/PetEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ParserEx2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ParserEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/OperationEx"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/OOPEx2_Constructor"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/OOPEx1_BasicConcept"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/MethodCreationEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/MethodCreationEx"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/MemberClass"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/InterfaceEx2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/InterfaceEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/Interface_LooseCoupling"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/InstanceCopy"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/InheritanceEx2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/InheritanceEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/HelloJava"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ForEx"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ExceptionTest3"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ExceptionTest2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ExceptionTest1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ExceptionTest"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ElectricMartEx2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ElectricMartEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/DataTypeCasting"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/DataTypeAndVariable"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ConstructorTest"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/CompanyEx2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/CompanyEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/CardTest"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/CardDealerTest2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/CardDealerTest"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ArrayEx7"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ArrayEx6"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ArrayEx5"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ArrayEx4"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ArrayEx3"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ArrayEx2"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/ArrayEx1"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th/AccountEx"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture/KDT8th"/>
+			<item value="/Users/eugene/Desktop/KDT 2023/Lacture"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="607"/>
+		<item key="DIALOG_Y_ORIGIN" value="356"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>
