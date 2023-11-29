@@ -6,7 +6,7 @@ import java.util.Set;
 public class HashSetRegNoTest {
 
 	public static void main(String[] args) {
-		Korean k1 = new Korean("840821-12", "둘리");
+		Korean k1 = new Korean("840821-1234567", "둘리");
 		Korean k2 = new Korean("2301-33333", "희동이");
 		Korean k3 = new Korean("999999", "둘리");
 		Korean k4 = new Korean("2303", "희동이");
