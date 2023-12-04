@@ -10,7 +10,7 @@ public class CompInt implements Comparator <Student>{
 			return 1;
 		} else if (s1.getScore() == s2.getScore()) { 
 			return s1.getStuNo().compareTo(s2.getStuNo());
-		}else {
+		} else {
 			return -1;
 		}
 		

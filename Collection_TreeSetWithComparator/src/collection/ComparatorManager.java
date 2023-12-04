@@ -10,19 +10,14 @@ public class ComparatorManager {
 		case 1 :
 			myComparator = new CompInt();
 			break;
-//		case 2 :
-//			myComparator = new CompMulti();
-//			break;
 		case 2 :
-			myComparator = new CompMulti2();
+			myComparator = new CompMulti();
 			break;
 		default :
 			myComparator = new CompString();
-			break;
-			
+			break;	
 		}
 		return myComparator;	
-		
 	}
 	
 }

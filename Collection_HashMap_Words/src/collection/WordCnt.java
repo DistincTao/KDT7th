@@ -32,7 +32,6 @@ public class WordCnt {
 			} else {
 				wordCnt.put(words[i], cnt);
 			}
-		
 		} 
 		
 		// 최종 결과 출력

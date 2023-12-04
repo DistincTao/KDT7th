@@ -9,12 +9,7 @@ public class CompMulti implements Comparator<Student> {
 		Comparator <Student > compInt = new CompInt();
 		compInt.compare(s1, s2);
 
-		Comparator <Student > compString = new CompString();
-		compString = compInt ;
-
-
-
-		return compString.compare(s1, s2);
+		return s1.getStuNo().compareTo(s2.getStuNo());
 		
 	}
 }
