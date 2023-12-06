@@ -18,7 +18,7 @@ public class BufferedInputOutputTest {
 		String filePath = "D:\\Lectures\\java\\ioex.txt";
 		String copyPath = "D:\\Lectures\\java\\ioex_Copy2.txt";
 
-		InputStreamReader inStr = null;
+		InputStreamReader inStr = null; // 예외 처리를 위해 분리하여 객체 생성
 		OutputStream outStr = null;
 		
 		try {
