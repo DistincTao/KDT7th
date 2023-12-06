@@ -5,14 +5,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.SQLSyntaxErrorException;
 import java.sql.Statement;
-import java.util.Scanner;
 
 public class InsertTest {
 
 public static void main(String[] args) {
 		
 		// 오라클 DB 접속하기 위해 필요한 정보 (아이디, 패스워드, DB서버 주소)
-		String id = "hr";
+		String id = "hr"; 
 		String pwd = "1234";
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 		
