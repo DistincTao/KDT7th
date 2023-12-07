@@ -33,19 +33,19 @@ public class SelectTest {
 				int empNo = sc.nextInt();
 				
 				// 실행할 쿼리문 준비
-				sql = "select * from Employees where EMPLOYEE_ID = " + empNo;
+				sql = "SELECT * FROM EMPLOYEES WHERE EMPLOYEE_ID = " + empNo;
 				// Statement 객체 생성 : 쿼리문을 Connection 객체가 연결하고 있는 DB서버로 전송하고 실행하는 역할을 하는 객체
 				stmt = con.createStatement();
 				// ResultSet 객체 생성 : 쿼리문이 실행된 후에 결과 테이블을 담고 있는 객체
 				rs = stmt.executeQuery(sql);
 				
 				if (rs.next()) {
-					System.out.println("EMPID FIRST LAST EMAIL PHONE "
-									+ "HIRE JOBID SAL COMM MANID DEPTID");
-					System.out.println(rs.getInt("EMPLOYEE_ID") + " " + rs.getString("FIRST_NAME") + " "
+					System.out.println("EMPID  FIRST  LAST EMAIL    PHONE    "
+									+ "  HIRE      JOBID   SAL    COMM MANID DEPTID");
+					System.out.println(rs.getInt("EMPLOYEE_ID") + "   " + rs.getString("FIRST_NAME") + " "
 									+ rs.getString("LAST_NAME") + " " + rs.getString("EMAIL") + " " + rs.getString("PHONE_NUMBER") 
-									+ " " + rs.getDate("HIRE_DATE") + " " + rs.getString("JOB_ID") + " " + rs.getInt("SALARY") + " " 
-									+ rs.getInt("COMMISSION_PCT") + " " + rs.getInt("MANAGER_ID") + " " + rs.getInt("DEPARTMENT_ID"));
+									+ " " + rs.getDate("HIRE_DATE") + " " + rs.getString("JOB_ID") + " " + rs.getInt("SALARY") + "     " 
+									+ rs.getInt("COMMISSION_PCT") + "     " + rs.getInt("MANAGER_ID") + "    " + rs.getInt("DEPARTMENT_ID"));
 				} else {
 					System.out.println("찾는 사원번호가 존재하지 않습니다.");	
 				} 
@@ -56,7 +56,7 @@ public class SelectTest {
 			rs.close();
 
 		} catch (ClassNotFoundException e) { // 클래스 부재 예외
-			e.printStackTrace();
+			System.out.println("Connection Fail!");
 		} catch (SQLException e) { // 연결 문제 예외
 			if (e instanceof SQLSyntaxErrorException) {
 				System.out.println("Please check the Query statement");

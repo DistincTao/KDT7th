@@ -31,12 +31,12 @@ public static void main(String[] args) {
 				int locId = 1700;
 				
 				// 실행할 쿼리문 준비
-				sql = "insert into Departments values (" +  deptNo + ", '" + dName + "', " + manId + ", " + locId + ")";
+				sql = "INSERT INTO DEPARTMENTS VALUES (" +  deptNo + ", '" + dName + "', " + manId + ", " + locId + ")";
 				// statement 객체 생성 : 연결하고 있는 DB서버로 전송하고 실행하는 역할을 하는 객체
 				stmt = con.createStatement();
 				int result = stmt.executeUpdate(sql);
 				
-				if (result == 1) {
+				if (result == 1) { // 1 이면 내용 전송 성공
 					System.out.println("insert 완료");	
 				}
 

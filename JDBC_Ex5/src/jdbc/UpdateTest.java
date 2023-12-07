@@ -2,6 +2,7 @@ package jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.SQLSyntaxErrorException;
 import java.sql.Statement;
@@ -16,7 +17,8 @@ public static void main(String[] args) {
 		String url = "jdbc:oracle:thin:@127.0.0.1:1521:xe";
 		
 		Connection con = null;
-		Statement stmt = null;
+//		Statement stmt = null;
+		PreparedStatement pstmt = null;
 		String sql = null;
 		
 		try {
@@ -24,19 +26,31 @@ public static void main(String[] args) {
 			con = DriverManager.getConnection(url, id, pwd);
 
 			if (con != null) {
-				int manId = 100;
 				int deptNo = 270;
+				String dName = "R&D";
+				int manId = 105;
+				int locId = 1700;
+				
 
-				// 실행할 쿼리문 준비
-				sql = "Update Departments set MANAGER_ID = " + manId + " where DEPARTMENT_ID = " + deptNo;
-				// statement 객체 생성 : 연결하고 있는 DB서버로 전송하고 실행하는 역할을 하는 객체
-				stmt = con.createStatement();
-				int result = stmt.executeUpdate(sql);
+
+//				sql = "UPDATE DEPARTMENTS SET MANAGER_ID = " + manId + " WHERE DEPARTMENT_ID = " + deptNo;
+//				stmt = con.createStatement();
+//				int result = stmt.executeUpdate(sql);
+
+//				sql = "UPDATE DEPARTMENTS SET MANAGER_ID = ?, DEPARTMENT_NAME = ?, LOCATION_ID = ? WHERE DEPARTMENT_ID = ?";
+				sql = "UPDATE DEPARTMENTS SET MANAGER_ID = ? WHERE DEPARTMENT_ID = ?";
+				pstmt = con.prepareStatement(sql);
+				pstmt.setInt(1, manId);
+				pstmt.setInt(2, deptNo);
+				int result = pstmt.executeUpdate();
 				
 				if (result == 1) {
-					System.out.println("update 완료");	
+					System.out.println("update 완료");
+					System.out.println("Auto-Commit : " + con.getAutoCommit());
 				}
-				stmt.close();
+				
+				pstmt.close();
+//				stmt.close();
 				con.close();
 			}
 

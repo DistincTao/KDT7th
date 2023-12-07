@@ -28,7 +28,7 @@ public static void main(String[] args) {
 				int deptNo = 280;
 				
 				// 실행할 쿼리문 준비
-				sql = "delete from DEPARTMENTS where DEPARTMENT_ID = " +  deptNo;
+				sql = "DELETE FROM DEPARTMENTS WHERE DEPARTMENT_ID = " +  deptNo;
 				// statement 객체 생성 : 연결하고 있는 DB서버로 전송하고 실행하는 역할을 하는 객체
 				stmt = con.createStatement();
 				int result = stmt.executeUpdate(sql);
