@@ -53,7 +53,10 @@ public class Action {
 		case 8 :
 			result = new DeleteFriendService();			
 			break;
-		case 9 : 
+		case 9 :
+			result = new DeleteAllFriendService();			
+			break;
+		case 0 : 
 			System.exit(0);
 		}
 		return result;

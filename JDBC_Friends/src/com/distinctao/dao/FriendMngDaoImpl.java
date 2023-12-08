@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import com.distinctao.vo.Friend;
+import com.distinctao.vo.FriendVo;
 
 public class FriendMngDaoImpl implements FriendMngDao {
 	private static FriendMngDaoImpl instance = null;
@@ -25,11 +25,11 @@ public class FriendMngDaoImpl implements FriendMngDao {
 	}
 
 	@Override
-	public List<Friend> selectAllFriends() throws ClassNotFoundException, SQLException {
+	public List<FriendVo> selectAllFriends() throws ClassNotFoundException, SQLException {
 		Connection con = DBConnection.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		List<Friend> list = new ArrayList<>();
+		List<FriendVo> list = new ArrayList<>();
 
 		if (con != null) {
 			String sql = "SELECT * FROM FRIENDS ORDER BY FRIEND_NO";
@@ -38,7 +38,7 @@ public class FriendMngDaoImpl implements FriendMngDao {
 			rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
-				list.add(new Friend(rs.getInt("FRIEND_NO"), rs.getString("FRIEND_NAME"), rs.getString("MOBILE"),
+				list.add(new FriendVo(rs.getInt("FRIEND_NO"), rs.getString("FRIEND_NAME"), rs.getString("MOBILE"),
 						rs.getString("ADDR")));
 			}
 
@@ -86,11 +86,11 @@ public class FriendMngDaoImpl implements FriendMngDao {
 	}
 
 	@Override
-	public List<Friend> selectByName() throws ClassNotFoundException, SQLException {
+	public List<FriendVo> selectByName() throws ClassNotFoundException, SQLException {
 		Connection con = DBConnection.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		List<Friend> list = new ArrayList<>();
+		List<FriendVo> list = new ArrayList<>();
 
 		if (con != null) {
 			String sql = "SELECT * FROM FRIENDS WHERE FRIEND_NAME = ?";
@@ -102,7 +102,7 @@ public class FriendMngDaoImpl implements FriendMngDao {
 			rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
-				list.add(new Friend(rs.getInt("FRIEND_NO"), rs.getString("FRIEND_NAME"), rs.getString("MOBILE"),
+				list.add(new FriendVo(rs.getInt("FRIEND_NO"), rs.getString("FRIEND_NAME"), rs.getString("MOBILE"),
 						rs.getString("ADDR")));
 			}
 
@@ -113,11 +113,11 @@ public class FriendMngDaoImpl implements FriendMngDao {
 	}
 
 	@Override
-	public List<Friend> selectByMobile() throws ClassNotFoundException, SQLException {
+	public List<FriendVo> selectByMobile() throws ClassNotFoundException, SQLException {
 		Connection con = DBConnection.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		List<Friend> list = new ArrayList<>();
+		List<FriendVo> list = new ArrayList<>();
 
 		if (con != null) {
 			String sql = "SELECT * FROM FRIENDS WHERE MOBILE = ?";
@@ -129,7 +129,7 @@ public class FriendMngDaoImpl implements FriendMngDao {
 			rs = pstmt.executeQuery();
 			
 			while (rs.next()) {
-				list.add(new Friend(rs.getInt("FRIEND_NO"), rs.getString("FRIEND_NAME"), rs.getString("MOBILE"),
+				list.add(new FriendVo(rs.getInt("FRIEND_NO"), rs.getString("FRIEND_NAME"), rs.getString("MOBILE"),
 						rs.getString("ADDR")));
 			}
 
@@ -230,6 +230,25 @@ public class FriendMngDaoImpl implements FriendMngDao {
 			
 			if (result == 1) {
 				System.out.println(friendName + "의 정보가 삭제 되었습니다.");
+			}
+
+		}
+		
+	}
+
+	@Override
+	public void deleteAllFriend() throws ClassNotFoundException, SQLException {
+		Connection con = DBConnection.getConnection();
+		PreparedStatement pstmt = null;
+		
+		if (con != null) {
+			String sql = "DELETE FROM FRIENDS";
+			
+			pstmt = con.prepareStatement(sql);
+			int result = pstmt.executeUpdate();
+			
+			if (result == 1) {
+				System.out.println("주소록의 정보가 초기화 되었습니다.");
 			}
 
 		}
