@@ -10,7 +10,9 @@ public class FriendDeleteByName {
 
 	public int deleData() throws ClassNotFoundException, SQLException {
 		OuputFriendByNameService fms = new OuputFriendByNameService();
-		fms.toDo();
+		while (!fms.isEmpty) {
+			fms.toDo();			
+		}
 
 		if (!fms.isEmpty) {
 			System.out.println("삭제할 번호를 입력하세요 >>>");

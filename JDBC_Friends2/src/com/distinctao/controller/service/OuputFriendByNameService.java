@@ -21,7 +21,6 @@ public class OuputFriendByNameService implements FriendManagementService {
 		String data = GetDataInfo.getInstance().inputName();
 		list = fmd.selectByName(data);
 
-		
 		if (list == null) {
 			System.out.println("조회할 정보가 업습니다.");
 			isEmpty = true;
