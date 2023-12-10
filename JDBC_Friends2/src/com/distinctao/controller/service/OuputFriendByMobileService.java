@@ -11,13 +11,16 @@ import com.distinctao.vo.FriendVo;
 
 public class OuputFriendByMobileService implements FriendManagementService {
 
+	public List<FriendVo> list;
+	public boolean isEmpty;
+	
 	@Override
 	public void toDo() throws ClassNotFoundException, SQLException {
 		FriendMngDao fmd = FriendMngDaoImpl.getInstance();
 		String data = GetDataInfo.getInstance().inputMobile();
-		List<FriendVo> list = fmd.selectByMobile(data);
+		list = fmd.selectByMobile(data);
 
-		if (list == null) {
+		if (list.size() == 0) {
 			System.out.println("조회할 정보가 업습니다.");
 		} else {
 			for (FriendVo f : list) {

@@ -12,7 +12,8 @@ public class UpdateFriendMobileService implements FriendManagementService {
 	@Override
 	public void toDo() throws ClassNotFoundException, SQLException {
 		FriendMngDao fmd = FriendMngDaoImpl.getInstance();
-		FriendUpdate update = new FriendUpdate().updateAddr();
+		FriendUpdate update = FriendUpdate.updateMobileInfo();
+		
 		fmd.updateMobile(update);
 	}
 

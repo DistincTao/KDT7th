@@ -12,18 +12,15 @@ import com.distinctao.vo.FriendVo;
 public class OuputFriendByNameService implements FriendManagementService {
 
 	public List<FriendVo> list;
-	public boolean isEmpty;
 
 	@Override
 	public void toDo() throws ClassNotFoundException, SQLException {
-		isEmpty = false;
 		FriendMngDao fmd = FriendMngDaoImpl.getInstance();
 		String data = GetDataInfo.getInstance().inputName();
 		list = fmd.selectByName(data);
 
-		if (list == null) {
+		if (list.size() <= 0) {
 			System.out.println("조회할 정보가 업습니다.");
-			isEmpty = true;
 		} else {
 			for (FriendVo f : list) {
 				System.out.println(f.toString());

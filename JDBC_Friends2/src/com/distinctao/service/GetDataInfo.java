@@ -20,14 +20,12 @@ public class GetDataInfo{
 	}
 
 	public String inputMobile() throws ClassNotFoundException, SQLException {
-		new FriendSearchMobile();
 		String data = FriendSearchMobile.getData();
 
 		return data;
 	}
 	
 	public String inputName() throws ClassNotFoundException, SQLException {
-		new FriendSearchMobile();
 		String data = FriendSearchName.getData();
 
 		return data;

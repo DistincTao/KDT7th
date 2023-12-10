@@ -12,7 +12,7 @@ public class UpdateFriendNameService implements FriendManagementService {
 	@Override
 	public void toDo() throws ClassNotFoundException, SQLException {
 		FriendMngDao fmd = FriendMngDaoImpl.getInstance();
-		FriendUpdate update = new FriendUpdate().updateAddr();
+		FriendUpdate update = FriendUpdate.updateNameInfo();
 
 		fmd.updateName(update);
 	}

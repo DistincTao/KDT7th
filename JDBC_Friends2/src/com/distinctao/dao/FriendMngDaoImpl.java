@@ -158,13 +158,9 @@ public class FriendMngDaoImpl implements FriendMngDao {
 			pstmt.setString(1, mobile);
 			rs = pstmt.executeQuery();
 
-			if (!rs.next()) {
-				System.out.println("조회할 정보가 없습니다.");
-			} else {
-				while (rs.next()) {
-					list.add(new FriendVo(rs.getInt("FRIEND_NO"), rs.getString("FRIEND_NAME"), rs.getString("MOBILE"),
-							rs.getString("ADDR")));
-				}
+			while (rs.next()) {
+				list.add(new FriendVo(rs.getInt("FRIEND_NO"), rs.getString("FRIEND_NAME"), rs.getString("MOBILE"),
+						rs.getString("ADDR")));
 			}
 
 			DBConnection.close(rs, pstmt, con);
@@ -177,17 +173,19 @@ public class FriendMngDaoImpl implements FriendMngDao {
 		Connection con = DBConnection.getConnection();
 		PreparedStatement pstmt = null;
 
+
 		if (con != null) {
-			String sql = "UPDATE FRIENDS SET FRIEND_NAME = ? WHERE FRIEND_NO = ? AND FRIEND_NAME = ?";
+			String sql = "UPDATE FRIENDS SET FRIEND_NAME = ? WHERE FRIEND_NO = ?";
 
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, update.newName);
 			pstmt.setInt(2, update.friend_No);
-			pstmt.setString(3, update.friend_Name);
 			int result = pstmt.executeUpdate();
 
 			if (result == 1) {
-				System.out.println(update.friend_Name + "의 이름이 " + update.newName + "로 변경 되었습니다.");
+				System.out.println(update.newName + "으로 변경 되었습니다.");
+			} else {
+				System.out.println("updated 실패");
 			}
 
 		}
@@ -201,16 +199,17 @@ public class FriendMngDaoImpl implements FriendMngDao {
 		PreparedStatement pstmt = null;
 
 		if (con != null) {
-			String sql = "UPDATE FRIENDS SET MOBILE = ? WHERE FRIEND_NO = ?, FRIEND_NAME = ?";
+			String sql = "UPDATE FRIENDS SET MOBILE = ? WHERE FRIEND_NO = ?";
 
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, update.mobile);
+			pstmt.setString(1, update.newMobile);
 			pstmt.setInt(2, update.friend_No);
-			pstmt.setString(3, update.friend_Name);
 			int result = pstmt.executeUpdate();
 
 			if (result == 1) {
-				System.out.println(update.friend_Name + "의 전화번호가 " + update.mobile + "로 변경 되었습니다.");
+				System.out.println("전화번호가 " + update.newMobile + "로 변경 되었습니다.");
+			} else {
+				System.out.println("updated 실패");
 			}
 
 		}
@@ -223,16 +222,17 @@ public class FriendMngDaoImpl implements FriendMngDao {
 		PreparedStatement pstmt = null;
 
 		if (con != null) {
-			String sql = "UPDATE FRIENDS SET ADDR = ? WHERE FRIEND_NO = ?, WHERE FRIEND_NAME = ?";
+			String sql = "UPDATE FRIENDS SET ADDR = ? WHERE FRIEND_NO = ?";
 
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, update.addr);
+			pstmt.setString(1, update.newAddr);
 			pstmt.setInt(2, update.friend_No);
-			pstmt.setString(3, update.friend_Name);
 			int result = pstmt.executeUpdate();
 
 			if (result == 1) {
-				System.out.println(update.friend_Name + "의 주소가 " + update.addr + "로 변경 되었습니다.");
+				System.out.println("주소가 " + update.newAddr + "로 변경 되었습니다.");
+			} else {
+				System.out.println("updated 실패");
 			}
 
 		}
@@ -253,6 +253,8 @@ public class FriendMngDaoImpl implements FriendMngDao {
 
 			if (result == 1) {
 				System.out.println(friend_No + "번 친구의 정보가 삭제 되었습니다.");
+			} else {
+				System.out.println("확인 후 다시 시도 해주세요");
 			}
 
 		}
@@ -272,6 +274,8 @@ public class FriendMngDaoImpl implements FriendMngDao {
 
 			if (result == 1) {
 				System.out.println("주소록이 초기화 되었습니다.");
+			} else {
+				System.out.println("초기화 실패");
 			}
 
 		}
